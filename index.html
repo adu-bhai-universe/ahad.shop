@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hearth &amp; Desk | Everyday objects, well made</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="promo">Free shipping on orders over $75</div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">Hearth &amp; Desk</a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#why">Why us</a>
+      <a href="#help">Help</a>
+    </nav>
+    <div class="header-tools">
+      <input id="search" class="search" type="search" placeholder="Search products" aria-label="Search products">
+      <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+        Cart <span id="cartCount" class="count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Objects for the desk, the kitchen and the commute.</h1>
+        <p>Small-batch goods made to be used every day and repaired, not replaced. Ships in 2 business days.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#shop">Shop all products</a>
+          <a class="btn btn-ghost" href="#why">How we make things</a>
+        </div>
+      </div>
+      <div class="hero-art" id="heroArt" aria-hidden="true"></div>
+    </section>
+
+    <section id="shop" class="shop">
+      <div class="toolbar">
+        <div id="filters" class="filters" role="group" aria-label="Filter by category"></div>
+        <label class="sort">Sort by
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </label>
+      </div>
+      <p id="resultCount" class="result-count" aria-live="polite"></p>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <section id="why" class="perks">
+      <div><h3>Free returns</h3><p>Not right? Send it back within 30 days.</p></div>
+      <div><h3>Repair, don't replace</h3><p>Spare parts and repair guides for everything we sell.</p></div>
+      <div><h3>Secure checkout</h3><p>Pay by card or wallet. We never store card details.</p></div>
+    </section>
+  </main>
+
+  <footer id="help" class="footer">
+    <p>&copy; 2026 Hearth &amp; Desk. Questions? help@hearthanddesk.example</p>
+  </footer>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <aside id="drawer" class="drawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h2>Your cart</h2>
+      <button id="closeCart" class="icon-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="ship">
+      <p id="shipMsg"></p>
+      <div class="bar"><span id="shipBar"></span></div>
+    </div>
+    <ul id="cartItems" class="cart-items"></ul>
+    <div class="drawer-foot">
+      <div class="subtotal"><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+      <p class="fine">Taxes calculated at checkout.</p>
+      <button id="checkout" class="btn btn-primary btn-block">Check out</button>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
